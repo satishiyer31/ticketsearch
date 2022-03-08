@@ -40,11 +40,11 @@ function getTicket(event) {
 }
 
 function startAuthFlow() {
-  var endpoint = 'https://your_subdomain.zendesk.com/oauth/authorizations/new';
+  var endpoint = 'https://z3nsatishiyer.zendesk.com/oauth/authorizations/new';
   var url_params = '?' +
   'response_type=token' + '&' +
-  'redirect_uri=your_redirect_url' + '&' +
-  'client_id=your_unique_identifier' + '&' +
+  'redirect_uri=https://satishiyer31.github.io/ticketsearch/ticket_details.html' + '&' +
+  'client_id=ticketfetch' + '&' +
   'scope=' + encodeURIComponent('read write');
   window.location = endpoint + url_params;
 }
@@ -76,7 +76,7 @@ function makeRequest(token, ticket_id) {
     }
   };
 
-  var url = 'https://your_subdomain.zendesk.com/api/v2/tickets/' + ticket_id + '.json';
+  var url = 'https://z3nsatishiyer.zendesk.com/api/v2/tickets/' + ticket_id + '.json';
   request.open('GET', url, true);
   request.setRequestHeader("Authorization", "Bearer " + token);
   request.send();
