@@ -5,7 +5,7 @@ function init() {
   document.getElementById('details').style.display = "none";
 
   var url = window.location.href;
-  if (url.indexOf('your_redirect_url') !== -1) {
+  //if (url.indexOf('your_redirect_url') !== -1) {
     if (url.indexOf('access_token=') !== -1) {
       var access_token = readUrlParam(url, 'access_token');
       console.log(access_token);
@@ -21,7 +21,7 @@ function init() {
       var msg = 'Authorization error: ' + error_desc;
       showError(msg);
     }
-  }
+  //}
 }
 
 function getTicket(event) {
