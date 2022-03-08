@@ -1,5 +1,6 @@
 function init() {
   // reset page
+  console.log('v1')
   document.getElementById('error-msg').style.display = "none";
   document.getElementById('details').style.display = "none";
 
