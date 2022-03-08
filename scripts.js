@@ -8,6 +8,7 @@ function init() {
   if (url.indexOf('your_redirect_url') !== -1) {
     if (url.indexOf('access_token=') !== -1) {
       var access_token = readUrlParam(url, 'access_token');
+      console.log(access_token);
       localStorage.setItem('zauth', access_token);
       var ticket_id = localStorage.getItem('ticket_id');
       document.getElementById('ticket-id').value = ticket_id;
